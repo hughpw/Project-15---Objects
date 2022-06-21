@@ -20,17 +20,25 @@ const spaceCraft3 = {
   topSpeedMph: 10500
 };
 
-const spaceCraftCarrier = [];
+const spaceCraftCarrier = [spaceCraft1, spaceCraft2, spaceCraft3];
 
-spaceCraftCarrier.push(spaceCraft1, spaceCraft2, spaceCraft3);
+// console.log(spaceCraftCarrier);
+// console.log(`Spacecraft 2 has a range of ${
+//   spaceCraftCarrier[1].rangeInMiles} miles!`);
 
-console.log(spaceCraftCarrier);
-console.log(`Spacecraft 2 has a range of ${
-  spaceCraftCarrier[1].rangeInMiles} miles!`);
+// for (i=0; i <= 2; i++) {
+//   console.log(`Space craft ${i+1
+//   } has a top speed of ${spaceCraftCarrier[i].topSpeedMph
+//   } mph!`);
+// }
 
-for (i=0; i <= 2; i++) {
-  console.log(`Space craft ${i+1
-  } has a top speed of ${spaceCraftCarrier[i].topSpeedMph
-  } mph!`);
+let k = 0;
+
+for (let j in spaceCraftCarrier) {
+  k++;
+  alert(`Space craft ${k} weighs ${
+    spaceCraftCarrier[j].weightInkg.toLocaleString("en-US")
+  } kg! And it has a range of ${spaceCraftCarrier
+  [j].rangeInMiles.toLocaleString("en-US")} miles.`)
 }
 
